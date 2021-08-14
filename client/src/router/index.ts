@@ -21,7 +21,7 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
-    path: "/ping",
+    path: "/viewTable",
     name: "Ping",
     component: Ping,
   }

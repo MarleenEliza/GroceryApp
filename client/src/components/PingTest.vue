@@ -18,7 +18,7 @@ export default Vue.extend({
   methods: {
     getMessage() {
      console.log('getting message...');
-      const path = "http://localhost:5000/ping";
+      const path = "http://127.0.0.1:5000/viewTable";
       axios
         .get(path)
         .then((response) => {

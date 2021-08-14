@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-import db
+from db import main as db
+from db.tables import view_tables
 
 # configuration
 DEBUG = True
@@ -13,9 +14,9 @@ app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 # sanity check route
-@app.route('/ping', methods=['GET'])
-def ping_pong():
-    query = db.select_all(db.view_tables.recipe_view.value)
+@app.route('/viewTable', methods=['GET'])
+def getViewTable():
+    query = db.select_all(view_tables.recipe_view.value)
     return jsonify(db.read_query(db.get_connection(), query))
 
 if __name__ == '__main__':

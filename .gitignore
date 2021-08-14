@@ -1,4 +1,9 @@
 BU/
 .vscode/
 .env
-.DS_Store
+**/.DS_Store
+server/db/__pycache__/
+server/.DS_Store
+client/node_modules/.cache/
+client/node_modules/.DS_Store
+server/.DS_Store
