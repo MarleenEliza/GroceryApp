@@ -1,18 +1,36 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <nav-bar title="Grocery App"> </nav-bar>
+    <div class="">
+      <router-link to="/">
+        <button-big
+          title="Go Shop!"
+          icon="shopping-basket"
+          extraClass="green"
+        />
+      </router-link>
+      <button-big title="Register" icon="cash-register" />
+      <button-big title="Settings" icon="cog" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import HelloWorld from "../components/HelloWorld.vue"; // @ is an alias to /src
+import NavBar from "../components/NavBar.vue";
+import ButtonBig from "../components/ui/ButtonBig.vue";
 
 export default Vue.extend({
   name: "Home",
   components: {
-    HelloWorld,
+    NavBar,
+    ButtonBig,
   },
 });
 </script>
+<style scoped lang="scss">
+.button.big {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
