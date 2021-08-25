@@ -1,16 +1,14 @@
 <template>
   <div class="home">
     <nav-bar title="Grocery App"> </nav-bar>
-    <div class="">
-      <router-link to="/">
-        <button-big
-          title="Go Shop!"
-          icon="shopping-basket"
-          extraClass="green"
-        />
+    <div class="container">
+      <router-link
+        v-for="(button, index) in buttons"
+        :key="index"
+        :to="button.link"
+      >
+        <button-big v-bind="button" />
       </router-link>
-      <button-big title="Register" icon="cash-register" />
-      <button-big title="Settings" icon="cog" />
     </div>
   </div>
 </template>
@@ -25,6 +23,24 @@ export default Vue.extend({
   components: {
     NavBar,
     ButtonBig,
+  },
+  data() {
+    return {
+      buttons: [
+        {
+          title: "Go Shop!",
+          icon: "shopping-basket",
+          extraClass: "green",
+          link: "/viewTable",
+        },
+        {
+          title: "Register",
+          icon: "cash-register",
+          link: "/",
+        },
+        { title: "Settings", icon: "cog", link: "/" },
+      ],
+    };
   },
 });
 </script>
