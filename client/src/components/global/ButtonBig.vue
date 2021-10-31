@@ -1,5 +1,5 @@
 <template>
-  <div class="button big" :class="extraClass">
+  <div class="button" :class="extraClass">
     <div class="flex items-center justify-around w-10/12">
       <font-awesome-icon class="text-4xl" :icon="['fa', icon]" />
       <strong>{{ title }}</strong>
@@ -28,12 +28,12 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped lang="scss">
-.button.big {
-  @apply bg-gray my-6 w-10/12 py-9 text-2xl flex items-center text-white;
-  border-radius: 0.5rem;
-}
-.green {
-  background-color: #bce08a !important;
-}
+
+<style scoped lang="sass">
+.button.big
+  @apply bg-gray my-6 w-10/12 py-9 text-2xl flex items-center text-white
+    border-radius: 0.5rem
+
+.green
+  background-color: #bce08a !important
 </style>
