@@ -1,10 +1,10 @@
 <template>
-  <div class="button" :class="extraClass">
+  <button class="button" :class="extraClass">
     <div class="flex items-center justify-around w-10/12">
       <font-awesome-icon class="text-4xl" :icon="['fa', icon]" />
       <strong>{{ title }}</strong>
     </div>
-  </div>
+  </button>
 </template>
 
 <script lang="ts">
@@ -29,11 +29,11 @@ export default Vue.extend({
 </script>
 
 
-<style scoped lang="sass">
-.button.big
-  @apply bg-gray my-6 w-10/12 py-9 text-2xl flex items-center text-white
-    border-radius: 0.5rem
+<style lang="sass">
+.button
+  border-radius: 0.5rem
+  @apply bg-gray my-6 w-10/12 py-9 text-2xl flex items-center text-white ml-auto mr-auto
 
 .green
-  background-color: #bce08a !important
+  @apply bg-green
 </style>

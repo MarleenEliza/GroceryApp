@@ -16,7 +16,7 @@
 <script lang="ts">
 import Vue from "vue";
 import NavBar from "../components/NavBar.vue";
-import ButtonBig from "../components/ui/ButtonBig.vue";
+import ButtonBig from "../components/global/ButtonBig.vue";
 
 export default Vue.extend({
   name: "Home",
